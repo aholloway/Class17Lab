@@ -3,7 +3,7 @@ package class17lab;
 
 import java.util.*;
 
-public class Lab3 {
+public class Lab5 {
 
 
     public static void main(String[] args) {
@@ -12,7 +12,8 @@ public class Lab3 {
         Employee e3 = new Employee("Evans", "Bob", "444-44-4444");
         Employee e4 = new Employee("Lombardo","James","444-44-4444");
         
-        Map<String,Employee> map = new HashMap<>();
+        //using comparable
+        Map<String,Employee> map = new TreeMap<>();
         
         map.put(e1.getSsn(), e1);
         map.put(e2.getSsn(), e2);
@@ -21,10 +22,19 @@ public class Lab3 {
 
         Set<String> keys = map.keySet();
         
+        System.out.println("By ssn:");
         for (String key : keys){
             System.out.println(map.get(key));
         }
         
+        //using comparator
+        Collection <Employee> values = map.values();
+        List <Employee> sortedList = new ArrayList<> (values);
+        Collections.sort(sortedList, new EmployeeByLastName());
         
+        System.out.println("\nBy last name:");
+        for(Employee emp : sortedList) {
+            System.out.println(emp);
+        }
     }
 }

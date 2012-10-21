@@ -2,7 +2,6 @@
 package class17lab;
 
 import java.util.*;
-import lab1.Employee;
 
 public class Lab2 {
 
