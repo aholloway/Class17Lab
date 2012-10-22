@@ -25,7 +25,7 @@ public class Lab5 {
             System.out.println(e);
         }
 
-        System.out.println("/nAs does iterator:");
+        System.out.println("\nAs does iterator:");
         Iterator<Employee> i = employees.iterator();
         while( i.hasNext() ) {
             System.out.println(i.next());
