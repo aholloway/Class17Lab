@@ -1,6 +1,6 @@
 package class17lab;
 
-import org.apache.commons.lang.builder.CompareToBuilder;
+import org.apache.commons.lang3.builder.CompareToBuilder;
 
 
 public class Employee implements Comparable {
